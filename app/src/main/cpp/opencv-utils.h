@@ -1,0 +1,8 @@
+//
+// Created by rauls on 17/06/2024.
+//
+
+#ifndef OPENCVNATIVE_OPENCV_UTILS_H
+#define OPENCVNATIVE_OPENCV_UTILS_H
+
+#endif //OPENCVNATIVE_OPENCV_UTILS_H

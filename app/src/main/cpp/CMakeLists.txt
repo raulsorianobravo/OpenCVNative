@@ -9,6 +9,11 @@ cmake_minimum_required(VERSION 3.22.1)
 
 project("opencvnative")
 
+#OpenCV
+set(OpenCV_STATIC on)
+set(OpenCV_DIR C:/Users/rauls/Downloads/opencv-4.10.0-android-sdk/OpenCV-android-sdk/sdk/native/jni)
+find_package(OpenCV REQUIRED)
+
 # Creates and names a library, sets it as either STATIC
 # or SHARED, and provides the relative paths to its source code.
 # You can define multiple libraries, and CMake builds them for you.
@@ -36,6 +41,8 @@ find_library( # Sets the name of the path variable.
         # you want CMake to locate.
         log)
 
+find_library(jnigraphics-lib jnigraphics)
+
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.
@@ -45,4 +52,6 @@ target_link_libraries( # Specifies the target library.
 
         # Links the target library to the log library
         # included in the NDK.
+        ${OpenCV_LIBS}
+        ${jnigraphics-lib}
         ${log-lib})
