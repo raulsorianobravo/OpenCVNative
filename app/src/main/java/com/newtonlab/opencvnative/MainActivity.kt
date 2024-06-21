@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        srcBitmap = BitmapFactory.decodeResource(this.resources, R.drawable.skate)
+        srcBitmap = BitmapFactory.decodeResource(this.resources, R.drawable.rallycar)
 
         dstBitmap = srcBitmap!!.copy(srcBitmap!!.config, true)
 
